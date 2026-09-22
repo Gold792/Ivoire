@@ -1,0 +1,357 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Demande d'adhésion au réseau IVOIRE PROPULSION." />
+  <title>Adhésion — IVOIRE PROPULSION</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body class="page-form">
+
+  <!-- ================= HEADER ================= -->
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand" aria-label="Accueil IVOIRE PROPULSION">
+        <span class="brand-mark">
+          <img src="assets/images/logo.png" alt="Logo IVOIRE PROPULSION" onerror="this.style.display='none'; this.parentNode.classList.add('brand-mark--fallback');" />
+          <i class="fa-solid fa-bolt brand-fallback-icon" aria-hidden="true"></i>
+        </span>
+        <span class="brand-text"><strong>IVOIRE</strong><span>PROPULSION</span></span>
+      </a>
+      <a href="index.html" class="btn btn-ghost btn-sm">
+        <i class="fa-solid fa-arrow-left" aria-hidden="true"></i>
+        Retour à l'accueil
+      </a>
+    </div>
+  </header>
+
+  <!-- ================= FORMULAIRE ================= -->
+  <main class="form-page">
+    <div class="container">
+
+      <div class="form-head reveal">
+        <span class="eyebrow"><i class="fa-solid fa-user-plus" aria-hidden="true"></i> Adhésion au réseau</span>
+        <h1>Rejoignez <span class="grad-text">IVOIRE PROPULSION</span></h1>
+        <p>Complétez le formulaire ci-dessous pour soumettre votre demande d'adhésion. Toutes les informations restent confidentielles.</p>
+      </div>
+
+      <!-- Barre de progression -->
+      <div class="progress-wrap" aria-hidden="true">
+        <div class="progress-track">
+          <div class="progress-fill" id="progressFill" style="width: 20%"></div>
+        </div>
+        <div class="progress-steps">
+          <div class="progress-step is-active" data-step-label="1">
+            <span class="ps-num">01</span>
+            <span class="ps-label">Identité</span>
+          </div>
+          <div class="progress-step" data-step-label="2">
+            <span class="ps-num">02</span>
+            <span class="ps-label">Profil</span>
+          </div>
+          <div class="progress-step" data-step-label="3">
+            <span class="ps-num">03</span>
+            <span class="ps-label">Projets</span>
+          </div>
+          <div class="progress-step" data-step-label="4">
+            <span class="ps-num">04</span>
+            <span class="ps-label">Réseau</span>
+          </div>
+          <div class="progress-step" data-step-label="5">
+            <span class="ps-num">05</span>
+            <span class="ps-label">Validation</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORMULAIRE MULTI-ETAPES -->
+      <form id="adhesionForm" class="form" novalidate autocomplete="on">
+
+        <!-- ================= ÉTAPE 1 ================= -->
+        <fieldset class="form-step is-active" data-step="1">
+          <legend class="sr-only">Étape 1 — Identité</legend>
+
+          <div class="form-step-head">
+            <span class="step-index">01</span>
+            <div>
+              <h2>Identité</h2>
+              <p>Informations personnelles de base.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="full_name">Nom et prénom(s) <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-user" aria-hidden="true"></i>
+              <input type="text" id="full_name" name="full_name" placeholder="Ex : KOUAME Jean-Marc" required autocomplete="name" />
+            </div>
+            <small class="error-msg" data-error-for="full_name"></small>
+          </div>
+
+          <div class="field">
+            <label for="whatsapp">Numéro WhatsApp <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-brands fa-whatsapp" aria-hidden="true"></i>
+              <input type="tel" id="whatsapp" name="whatsapp" placeholder="Ex : +225 07 00 00 00 00" required autocomplete="tel" />
+            </div>
+            <small class="error-msg" data-error-for="whatsapp"></small>
+          </div>
+
+          <div class="grid grid-2">
+            <div class="field">
+              <label for="age">Âge <span class="req">*</span></label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-cake-candles" aria-hidden="true"></i>
+                <input type="number" id="age" name="age" min="16" max="100" placeholder="Ex : 32" required />
+              </div>
+              <small class="error-msg" data-error-for="age"></small>
+            </div>
+
+            <div class="field">
+              <label for="residence">Lieu d'habitation <span class="req">*</span></label>
+              <div class="input-wrap">
+                <i class="fa-solid fa-location-dot" aria-hidden="true"></i>
+                <input type="text" id="residence" name="residence" placeholder="Ex : Abidjan, Cocody" required autocomplete="address-level2" />
+              </div>
+              <small class="error-msg" data-error-for="residence"></small>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <span></span>
+            <button type="button" class="btn btn-primary" data-next>
+              Suivant <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- ================= ÉTAPE 2 ================= -->
+        <fieldset class="form-step" data-step="2">
+          <legend class="sr-only">Étape 2 — Profil professionnel</legend>
+
+          <div class="form-step-head">
+            <span class="step-index">02</span>
+            <div>
+              <h2>Profil professionnel</h2>
+              <p>Votre activité et votre position au sein du réseau.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="profession">Profession / Fonction <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-id-badge" aria-hidden="true"></i>
+              <input type="text" id="profession" name="profession" placeholder="Ex : Directeur commercial" required />
+            </div>
+            <small class="error-msg" data-error-for="profession"></small>
+          </div>
+
+          <div class="field">
+            <label for="activity_sector">Activité / Secteur d'activité <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-industry" aria-hidden="true"></i>
+              <input type="text" id="activity_sector" name="activity_sector" placeholder="Ex : Agroalimentaire, Tech, BTP..." required />
+            </div>
+            <small class="error-msg" data-error-for="activity_sector"></small>
+          </div>
+
+          <div class="field">
+            <label for="member_status">Position / Statut au sein d'IVOIRE PROPULSION <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-user-tag" aria-hidden="true"></i>
+              <select id="member_status" name="member_status" required>
+                <option value="">— Sélectionnez votre statut —</option>
+                <option value="Entrepreneur">Entrepreneur</option>
+                <option value="Porteur de projet">Porteur de projet</option>
+                <option value="Investisseur">Investisseur</option>
+                <option value="Professionnel">Professionnel</option>
+                <option value="Partenaire">Partenaire</option>
+                <option value="Collaborateur">Collaborateur</option>
+                <option value="Membre">Membre</option>
+                <option value="Autre">Autre</option>
+              </select>
+            </div>
+            <small class="error-msg" data-error-for="member_status"></small>
+          </div>
+
+          <div class="field">
+            <label for="expertise">Compétences / Domaines d'expertise <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-award" aria-hidden="true"></i>
+              <textarea id="expertise" name="expertise" rows="4" placeholder="Décrivez vos compétences clés, votre expertise, vos savoir-faire..." required></textarea>
+            </div>
+            <small class="error-msg" data-error-for="expertise"></small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" data-prev>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Précédent
+            </button>
+            <button type="button" class="btn btn-primary" data-next>
+              Suivant <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- ================= ÉTAPE 3 ================= -->
+        <fieldset class="form-step" data-step="3">
+          <legend class="sr-only">Étape 3 — Projets et besoins</legend>
+
+          <div class="form-step-head">
+            <span class="step-index">03</span>
+            <div>
+              <h2>Projets et besoins</h2>
+              <p>Décrivez vos projets et vos besoins de financement.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="short_term_project">Projet à court terme <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-bolt" aria-hidden="true"></i>
+              <textarea id="short_term_project" name="short_term_project" rows="4" placeholder="Décrivez votre projet à court terme (6 à 12 mois)..." required></textarea>
+            </div>
+            <small class="error-msg" data-error-for="short_term_project"></small>
+          </div>
+
+          <div class="field">
+            <label for="long_term_project">Projet à long terme <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-rocket" aria-hidden="true"></i>
+              <textarea id="long_term_project" name="long_term_project" rows="4" placeholder="Décrivez votre vision à long terme (2 à 5 ans)..." required></textarea>
+            </div>
+            <small class="error-msg" data-error-for="long_term_project"></small>
+          </div>
+
+          <div class="field">
+            <label for="funding_needs">Besoins et financement recherché <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-money-bill-transfer" aria-hidden="true"></i>
+              <textarea id="funding_needs" name="funding_needs" rows="4" placeholder="Précisez le type et le montant du financement recherché, ou vos besoins de mise en relation..." required></textarea>
+            </div>
+            <small class="error-msg" data-error-for="funding_needs"></small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" data-prev>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Précédent
+            </button>
+            <button type="button" class="btn btn-primary" data-next>
+              Suivant <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- ================= ÉTAPE 4 ================= -->
+        <fieldset class="form-step" data-step="4">
+          <legend class="sr-only">Étape 4 — Réseau</legend>
+
+          <div class="form-step-head">
+            <span class="step-index">04</span>
+            <div>
+              <h2>Réseau</h2>
+              <p>Ce que vous recherchez au sein du réseau.</p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="partnership_needs">Partenariat ou collaboration recherché(e) <span class="req">*</span></label>
+            <div class="input-wrap">
+              <i class="fa-solid fa-handshake" aria-hidden="true"></i>
+              <textarea id="partnership_needs" name="partnership_needs" rows="5" placeholder="Décrivez le type de partenaire ou de collaboration que vous recherchez (investisseur, banque, entreprise, institution...)" required></textarea>
+            </div>
+            <small class="error-msg" data-error-for="partnership_needs"></small>
+          </div>
+
+          <div class="info-block">
+            <div class="info-head">
+              <i class="fa-solid fa-circle-info" aria-hidden="true"></i>
+              <h3>Adhésion et accès au réseau</h3>
+            </div>
+            <p>
+              En devenant membre officiel d'IVOIRE PROPULSION, vous rejoignez notre
+              base de données professionnelle et accédez à un réseau de membres,
+              investisseurs, financeurs, banques, institutions de microfinance,
+              partenaires et collaborateurs d'affaires.
+            </p>
+            <p>
+              L'objectif est de faciliter les mises en relation, les opportunités de
+              financement, les partenariats et le développement des projets.
+            </p>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" data-prev>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Précédent
+            </button>
+            <button type="button" class="btn btn-primary" data-next>
+              Suivant <i class="fa-solid fa-arrow-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </fieldset>
+
+        <!-- ================= ÉTAPE 5 ================= -->
+        <fieldset class="form-step" data-step="5">
+          <legend class="sr-only">Étape 5 — Validation</legend>
+
+          <div class="form-step-head">
+            <span class="step-index">05</span>
+            <div>
+              <h2>Validation</h2>
+              <p>Vérifiez et confirmez votre demande.</p>
+            </div>
+          </div>
+
+          <div class="review-block">
+            <h4><i class="fa-solid fa-list-check" aria-hidden="true"></i> Récapitulatif de votre demande</h4>
+            <ul id="reviewList" class="review-list">
+              <li><span>Identité</span><em>—</em></li>
+              <li><span>Profil professionnel</span><em>—</em></li>
+              <li><span>Projets &amp; besoins</span><em>—</em></li>
+              <li><span>Réseau</span><em>—</em></li>
+            </ul>
+          </div>
+
+          <div class="field field-consent">
+            <label class="consent-label">
+              <input type="checkbox" id="consent" name="consent" value="1" required />
+              <span class="consent-box" aria-hidden="true"><i class="fa-solid fa-check"></i></span>
+              <span class="consent-text">
+                Je souhaite adhérer au réseau IVOIRE PROPULSION et j'accepte que les
+                informations fournies soient utilisées dans le cadre de la gestion de
+                mon adhésion et des activités de mise en relation du réseau.
+                <a href="#">Politique de confidentialité</a>.
+              </span>
+            </label>
+            <small class="error-msg" data-error-for="consent"></small>
+          </div>
+
+          <div class="form-actions">
+            <button type="button" class="btn btn-ghost" data-prev>
+              <i class="fa-solid fa-arrow-left" aria-hidden="true"></i> Précédent
+            </button>
+            <button type="submit" class="btn btn-primary btn-lg">
+              <i class="fa-solid fa-paper-plane" aria-hidden="true"></i>
+              Soumettre ma demande
+            </button>
+          </div>
+        </fieldset>
+
+      </form>
+    </div>
+  </main>
+
+  <footer class="site-footer site-footer--min">
+    <div class="footer-bottom">
+      <p>&copy; <span id="year"></span> IVOIRE PROPULSION. Tous droits réservés.</p>
+    </div>
+  </footer>
+
+  <script src="assets/js/script.js" defer></script>
+</body>
+</html>
